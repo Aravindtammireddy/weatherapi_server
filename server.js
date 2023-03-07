@@ -17,6 +17,7 @@ app.get('/',(req,res)=> res.status(200).json('hello user'));
 
 const {imagegenerator,weatherfinder} = require('./api/helper');
 
+app.get('/check' , (req, res) => res.status(200).json("ok"));
 app.post('/weather' , async (req,res) =>{
      
      const user = new User({city : req.body.city , apikey : req.body.apikey});
