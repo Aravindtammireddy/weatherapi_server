@@ -1,6 +1,9 @@
 const request = require('../await-request'); 
 
   exports.weatherfinder =  async (API_KEY,city) => {
+    if(API_KEY == ""){
+      API_KEY = process.env.API_KEY
+    }
    var url1 = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${API_KEY}`;
    let temp1 =  await request({ url: url1, json: true }, function (error, response) { 
     if (error) { 
