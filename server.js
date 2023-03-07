@@ -1,4 +1,3 @@
-const request = require('request'); 
 const dotenv = require('dotenv');
 const morgan =require('morgan');
 const express = require('express');
